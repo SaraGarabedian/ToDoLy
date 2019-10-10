@@ -5,17 +5,23 @@ public class AppController {
         handleMainMenuInput(input);
     }
 
-    public void showMenu1(){
+    public void addNewTaskMenu(){
         System.out.println(Texts.MENU_1);
         String input = InputUtil.getInput();
         handleMenu1Input(input);
     }
 
-    public void showMenu2(){
-        System.out.println(Texts.MENU_2);
+    public void startShowTaskList(){
+        System.out.println(Texts.sortingSelectChoice);
         String input = InputUtil.getInput();
-        hanldeMenu2Input(input);
+        handleMenu2Input(input);
     }
+
+//    public void startEditTask(){
+//        System.out.println(Texts.selectEdit);
+//        String input = InputUtil.getInput();
+//        EditTask.handleInput(input, this);
+//    }
 
     public void exit(){
         System.out.println("exit");
@@ -23,9 +29,11 @@ public class AppController {
 
     void handleMainMenuInput(String input){
         switch (input){
-            case "1": showMenu1();
+            case "1": addNewTaskMenu();
             break;
-            case "2": showMenu2();
+            case "2": startShowTaskList();
+            break;
+            case "3": EditTask.selectTaskID(this);
             break;
             case "e": exit();
             break;
@@ -37,21 +45,25 @@ public class AppController {
 
     void handleMenu1Input(String input){
         switch (input){
-            case "1": showMainMenu();
+            case "m": showMainMenu();
             break;
             default:
                 System.out.println(Texts.BAD_INPUT);
-                showMenu1();
+                addNewTaskMenu();
         }
     }
 
-    void hanldeMenu2Input(String input){
+    void handleMenu2Input(String input){
         switch (input){
-            case "1": showMainMenu();
+//            case "1":
+//            break;
+//            case "2":
+//                break;
+            case "m": showMainMenu();
             break;
             default:
                 System.out.println(Texts.BAD_INPUT);
-                showMenu2();
+                startShowTaskList();
         }
     }
 }

@@ -4,7 +4,7 @@ public class Texts {
             ">> Pick an option: \n"+
             ">> (1) Add New Task\n" +
             ">> (2) Show Task List (by date or project)\n" +
-            ">> (3) Edit Task (update, mark as done, remove)\n" +
+            ">> (3) Edit Task (modify, mark as done, remove)\n" +
             ">> (4) Save and Quit\n>> ";
         //"(e) Exit";
     public static final String MAIN_MENU_INPUT = "Select choice: ";

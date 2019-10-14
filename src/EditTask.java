@@ -11,8 +11,8 @@ public class EditTask extends AbstractMenu {
             selectTask();
         }
 
-        System.out.printf(Texts.MENU_2, selectedTask);
-        String input = InputUtil.getInput();
+        System.out.printf(Texts.selectModify, selectedTask);
+        String input = InputUtil.getMenuSelection();
         handleMenuInput(input);
     }
 
@@ -46,6 +46,7 @@ public class EditTask extends AbstractMenu {
 
     private void changeTitle() {
         System.out.println("Change Title from: " + selectedTask.getTitle());
+        System.out.print("New Title: ");
         String input = InputUtil.getInput();
         selectedTask.setTitle(input);
         showMenu();

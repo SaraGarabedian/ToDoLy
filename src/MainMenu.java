@@ -6,7 +6,7 @@ public class MainMenu extends AbstractMenu{
     @Override
     public void showMenu(){
         System.out.printf(Texts.MAIN_MENU, appController.getNumberOfTasks(TaskStatus.TODO), appController.getNumberOfTasks(TaskStatus.DONE));
-        String input = InputUtil.getInput();
+        String input = InputUtil.getMenuSelection();
         handleMenuInput(input);
     }
 

@@ -14,7 +14,7 @@ public class Texts {
     public static final String sortingSelectChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (b) Back\n>> (m) Main Menu";
 
     public static final String selectEdit = "\n>> (1) Modify\n>> (2) Mark as done\n>> (r) Remove\n\n>> (b) Back\n>> (m) Main Menu";
-    public static final String selectModify = "\n>> (1) Title\n>> (2) Due date\n>> (3) Project\n\n>> (b) Back\n>> (m) Main Menu\n>> Select choice: ";
+    public static final String selectModify = "\n>> (1) Title\n>> (2) Due date\n>> (3) Project\n\n>> (b) Back\n>> (m) Main Menu\n";
 
     public static final String MENU_2 = "\n\nMy menu2\n(1) back to Main menu.";
     public static String selectInput = "\n>> (m) Main Menu\nSelect choice: \n";
@@ -25,7 +25,7 @@ public class Texts {
 
     public static String inputProjectName = "\nInput Project name: \n";
 
-    public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (b) Back\n>> (m) Main menu\n>> Select choice:  ";
+    public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (m) Main menu\n";
 
     public static String selectTaskID = "\n>> (m) Main Menu\n>> Select task ID: \n";
 

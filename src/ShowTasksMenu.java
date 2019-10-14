@@ -6,18 +6,24 @@ public class ShowTasksMenu extends AbstractMenu{
 
     @Override
     public void showMenu(){
-        System.out.println(Texts.MENU_2);
         appController.printTasks();
-        String input = InputUtil.getInput();
-        handleMenuInput(input);
+        System.out.println(Texts.sortingMenuChoice);
+        String input = InputUtil.getMenuSelection();
+        handleShowTaskMenuInput(input);
     }
 
-    @Override
-    public void handleMenuInput(String input){
+    public void handleShowTaskMenuInput(String input){
         switch (input){
-//            case "1": do something;
-//            break;
-            default:super.handleMenuInput(input);
+            //Needs to be implemented
+            case "1":
+                System.out.println("Sort by Due Date");
+                showMenu();
+            break;
+            case "2":
+                System.out.println("Sort by Project");
+                showMenu();
+                break;
+            default:handleMenuInput(input);
         }
     }
 }

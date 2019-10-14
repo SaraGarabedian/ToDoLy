@@ -1,3 +1,3 @@
 public enum MenuName {
-    MAIN, EDIT, SHOW;
+    MAIN, EDIT, SHOW, ADD;
 }

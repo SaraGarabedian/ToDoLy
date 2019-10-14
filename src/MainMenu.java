@@ -13,8 +13,8 @@ public class MainMenu extends AbstractMenu{
     @Override
     public void handleMenuInput(String input){
         switch (input){
-//            case "1":
-//            break;
+            case "1": appController.showMenu(MenuName.ADD);
+            break;
             case "2": appController.showMenu(MenuName.SHOW);
             break;
             case "3": appController.showMenu(MenuName.EDIT);

@@ -1,16 +1,16 @@
 public class Task {
-    long id;
-    String title;
-    String dueDate;
-    String project;
-    //TaskStatus status;
+    private int id;
+    private String title;
+    private String dueDate;
+    private String project;
+    TaskStatus status;
 
-    public Task(long id, String title, String dueDate, String project){
+    public Task(int id, String title, String dueDate, String project){
         this.id = id;
         this.title = title;
         this.dueDate = dueDate;
         this.project = project;
-        //this.status = TaskStatus.TODO;
+        this.status = TaskStatus.TODO;
     }
 
     public String getTitle() {
@@ -37,16 +37,20 @@ public class Task {
         this.project = project;
     }
 
-    /*public TaskStatus getStatus() {
+    public int getId() {
+        return id;
+    }
+    public TaskStatus getStatus() {
         return status;
     }
 
     public void setStatus(TaskStatus status) {
         this.status = status;
-    }*/
+    }
 
     @Override
     public String toString() {
-        return id + ". "+ title +", " + dueDate + ", " +project;
+        return String.format("%5d|%10s|%-20s|%-12s|%-6s|",id,dueDate,title,project,status);
+        //return id + ". "+ title +", " + dueDate + ", " +project + ", " + status;
     }
 }

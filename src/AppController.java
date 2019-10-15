@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,6 +40,11 @@ public class AppController {
     }
 
     public void exit() {
+        try {
+            SaveAndQuit.saveTask(tasks, "TaskFile.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Exit");
     }
 

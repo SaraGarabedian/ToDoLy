@@ -19,11 +19,9 @@ public class Texts {
     public static final String MENU_2 = "\n\nMy menu2\n(1) back to Main menu.";
     public static String selectInput = "\n>> (m) Main Menu\nSelect choice: \n";
 
-    public static String inputNewTitle = "\nInput new Title: \n";
-
-    public static String inputDueDate = "\nInput due date: \n";
-
-    public static String inputProjectName = "\nInput Project name: \n";
+    public static String inputNewTitle = "Input Title: ";
+    public static String inputDueDate = "Input Due date: ";
+    public static String inputProjectName = "Input Project name: ";
 
     public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (m) Main menu\n";
 

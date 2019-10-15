@@ -5,7 +5,7 @@ public class Task {
     private String project;
     TaskStatus status;
 
-    public Task(int id, String title, String dueDate, String project){
+    public Task(int id, String title, String dueDate, String project) {
         this.id = id;
         this.title = title;
         this.dueDate = dueDate;
@@ -40,6 +40,7 @@ public class Task {
     public int getId() {
         return id;
     }
+
     public TaskStatus getStatus() {
         return status;
     }
@@ -50,7 +51,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("%5d|%10s|%-20s|%-12s|%-6s|",id,dueDate,title,project,status);
+        return String.format("%5d|%10s|%-20s|%-12s|%-6s|", id, dueDate, title, project, status);
         //return id + ". "+ title +", " + dueDate + ", " +project + ", " + status;
     }
 }

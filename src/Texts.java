@@ -1,10 +1,10 @@
 public class Texts {
     public static final String MAIN_MENU = "\n>> Welcome to ToDoLy\n"+
-            ">> You have x tasks todo and Y tasks are done!\n" +
+            ">> You have %d tasks todo and %d tasks are done!\n" +
             ">> Pick an option: \n"+
             ">> (1) Add New Task\n" +
             ">> (2) Show Task List (by date or project)\n" +
-            ">> (3) Edit Task (update, mark as done, remove)\n" +
+            ">> (3) Edit Task (modify, mark as done, remove)\n" +
             ">> (4) Save and Quit\n>> ";
         //"(e) Exit";
     public static final String MAIN_MENU_INPUT = "Select choice: ";
@@ -19,11 +19,9 @@ public class Texts {
     public static final String MENU_2 = "\n\nMy menu2\n(1) back to Main menu.";
     public static String selectInput = "\n>> (m) Main Menu\nSelect choice: \n";
 
-    public static String inputNewTitle = "\nInput new Title: \n";
-
-    public static String inputDueDate = "\nInput due date: \n";
-
-    public static String inputProjectName = "\nInput Project name: \n";
+    public static String inputNewTitle = "Input Title: ";
+    public static String inputDueDate = "Input Due date: ";
+    public static String inputProjectName = "Input Project name: ";
 
     public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (m) Main menu\n";
 

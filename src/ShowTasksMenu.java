@@ -29,6 +29,11 @@ public class ShowTasksMenu extends AbstractMenu{
                 sortProject(appController.getTasks());
                 showMenu();
                 break;
+            case "3":
+                System.out.println("Sort by ID");
+                sortID(appController.getTasks());
+                showMenu();
+                break;
             default:handleMenuInput(input);
         }
     }

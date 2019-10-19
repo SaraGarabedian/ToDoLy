@@ -13,7 +13,7 @@ public class Texts {
     public static final String MENU_1 = "\n\nMy menu1\n(m) back to Main menu.";
     public static final String sortingSelectChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (b) Back\n>> (m) Main Menu";
 
-    public static final String selectEdit = "\n>> (1) Modify\n>> (2) Mark as done\n>> (r) Remove\n\n>> (b) Back\n>> (m) Main Menu";
+    public static final String selectEdit = "\n>> (1) Modify Title\n>> (2) Modify Due Date\n>> (3) Modify Project\n>> (4) Mark as done\n>> (r) Remove\n\n>> (m) Main Menu\n";
     public static final String selectModify = "\n>> (1) Title\n>> (2) Due date\n>> (3) Project\n\n>> (b) Back\n>> (m) Main Menu\n";
 
     public static final String MENU_2 = "\n\nMy menu2\n(1) back to Main menu.";

@@ -4,19 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SaveAndQuit {
-    public static void main(String[] args) {
-        List<Task> tasks = new ArrayList<>();
-        tasks.add(new Task(1, "Apples", "2019-10-24", "Shopping"));
-        tasks.add(new Task(2, "Bacon", "2020-10-24", "Shopping"));
 
-        try {
-            //saveTask(tasks, "TaskFile1.txt");
-            loadTasks();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
     public static void saveTask(List<Task> taskList, String fileName) throws IOException {
         FileWriter write = new FileWriter(new File(fileName), false);
         PrintWriter print_line = new PrintWriter(write);
@@ -27,12 +15,28 @@ public class SaveAndQuit {
         write.close();
     }
 
-    public static void loadTasks() throws FileNotFoundException {
-        File file = new File("TaskFile.txt");
+    public static void loadTasks(List<Task> taskList, String fileName) throws FileNotFoundException, Exception {
+        File file = new File(fileName);
         Scanner sc = new Scanner(file);
         while (sc.hasNextLine()) {
             String currentTaskString = sc.nextLine();
-            System.out.println(currentTaskString);
+            //Split string into parts
+            String[] splitList = currentTaskString.split("\\|");
+            String idString = splitList[0].trim();
+            //convert id to int
+            int id = Integer.parseInt(idString);
+            String title = splitList[1].trim();
+            String dueDate = splitList[2].trim();
+            String project = splitList[3].trim();
+            String status = splitList[4].trim();
+            //convert status to taskStatus
+            TaskStatus taskStatus = TaskStatus.getValueFromString(status);
+            //create new task
+            Task task = new Task(id, title, dueDate,project, taskStatus);
+            //add new task to task list
+            taskList.add(task);
+            System.out.println(task);
         }
+        sc.close();
     }
 }

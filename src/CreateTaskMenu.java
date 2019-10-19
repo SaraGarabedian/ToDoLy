@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class CreateTaskMenu  extends AbstractMenu{
-    public CreateTaskMenu(AppController appController){
+public class CreateTaskMenu extends AbstractMenu {
+    public CreateTaskMenu(AppController appController) {
         super(appController);
     }
 
@@ -20,7 +20,7 @@ public class CreateTaskMenu  extends AbstractMenu{
         appController.showMenu(MenuName.MAIN);
     }
 
-    private String getInput(String inputText){
+    private String getInput(String inputText) {
         System.out.print(inputText);
         return InputUtil.getInput();
     }

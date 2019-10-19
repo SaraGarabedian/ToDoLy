@@ -16,12 +16,11 @@ public class AppController {
         menus.put(MenuName.SHOW, new ShowTasksMenu(this));
         menus.put(MenuName.ADD, new CreateTaskMenu(this));
 
-        tasks.add(new Task(1, "Apples", "2019-10-24", "Shopping"));
-        tasks.add(new Task(2, "Bacon", "2020-10-24", "Shopping"));
-        tasks.add(new Task(3, "Höstfest", "2019-10-19", "Leisure"));
-        Task doneTask = new Task(4, "Höstfest", "2019-10-19", "Leisure");
-        doneTask.setStatus(TaskStatus.DONE);
-        tasks.add(doneTask);
+        try {
+            SaveAndQuit.loadTasks(tasks, "TaskFile.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public int getNumberOfTasks(TaskStatus todo){

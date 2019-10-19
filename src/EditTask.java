@@ -11,7 +11,7 @@ public class EditTask extends AbstractMenu {
             selectTask();
         }
 
-        System.out.printf(Texts.selectModify, selectedTask);
+        System.out.printf(Texts.selectEdit, selectedTask);
         String input = InputUtil.getMenuSelection();
         handleMenuInput(input);
     }
@@ -22,6 +22,14 @@ public class EditTask extends AbstractMenu {
             case "1":
                 changeTitle();
                 break;
+            case "2": changeDueDate();
+            break;
+            case"3": changeProject();
+            break;
+            case "4": markAsDone();
+            break;
+            case "r": removeTask();
+            break;
             default:
                 super.handleMenuInput(input);
         }
@@ -52,42 +60,36 @@ public class EditTask extends AbstractMenu {
         showMenu();
     }
 
+    private void changeDueDate() {
+        System.out.println("Change Due Date from: " + selectedTask.getDueDate());
+        System.out.print("New Due Date: ");
+        String input = InputUtil.getInput();
+        selectedTask.setDueDate(input);
+        showMenu();
+    }
+
+    private void changeProject() {
+        System.out.println("Change Project from: " + selectedTask.getProject());
+        System.out.print("New Project: ");
+        String input = InputUtil.getInput();
+        selectedTask.setProject(input);
+        showMenu();
+    }
+
+    private void markAsDone(){
+        selectedTask.setStatus(TaskStatus.DONE);
+        showMenu();
+    }
+
+    private void removeTask(){
+        appController.getTasks().remove(selectedTask);
+        System.out.println("This task has been removed: " + selectedTask);
+        selectedTask = null;
+        appController.showMenu(MenuName.MAIN);
+    }
+
     public static void main(String[] args) {
         AppController appControl = new AppController();
         new EditTask(appControl).showMenu();
     }
 }
-//
-//    static void selectTaskID(AppController appController) {
-//        System.out.println("Shows Task list");
-//        String input = InputUtil.getInput();
-////        Task task = new Task(1, "Apples", "2019-10-24", "Grocery shopping");
-//        showMenu(appController);
-//    }
-//
-//    static void showMenu(AppController appController){
-//        //print task
-//        System.out.println();
-//        System.out.println(Texts.selectEdit);
-//        String input = InputUtil.getInput();
-//        handleInput(input, appController);
-//    }
-//
-//    static void showModifyMenu(){
-////        System.out.println();
-//        System.out.println(Texts.selectModify);
-//        String input = InputUtil.getInput();
-//
-//    }
-//    static void handleInput(String input, AppController appController){
-//        switch (input){
-//            case "1": showModifyMenu();
-//                break;
-//            case "m": appController.showMainMenu();
-//                break;
-//            default:
-//                System.out.println(Texts.BAD_INPUT);
-//                showMenu(appController);
-//        }
-//    }
-//}

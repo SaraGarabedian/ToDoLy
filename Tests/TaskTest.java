@@ -24,21 +24,40 @@ class TaskTest {
 
     @Test
     void getDueDate() {
+        Task task = getTestTask();
+        assertEquals("2019-10-15", task.getDueDate());
     }
 
     @Test
     void setDueDate() {
+        Task task = getTestTask();
+        task.setDueDate("2019-12-15");
+        assertEquals("2019-12-15", task.getDueDate());
     }
 
     @Test
     void getProject() {
+        Task task = getTestTask();
+        assertEquals("Now", task.getProject());
     }
 
     @Test
     void setProject() {
+        Task task = getTestTask();
+        task.setProject("Test");
+        assertEquals("Test", task.getProject());
     }
 
     @Test
-    void testToString() {
+    void getStatus() {
+        Task task = getTestTask();
+        assertEquals(TaskStatus.TODO, task.getStatus());
+    }
+
+    @Test
+    void setStatus() {
+        Task task = getTestTask();
+        task.setStatus(TaskStatus.DONE);
+        assertEquals(TaskStatus.DONE, task.getStatus());
     }
 }

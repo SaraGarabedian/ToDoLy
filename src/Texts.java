@@ -23,7 +23,7 @@ public class Texts {
     public static String inputDueDate = "Input Due date: ";
     public static String inputProjectName = "Input Project name: ";
 
-    public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (m) Main menu\n";
+    public static String sortingMenuChoice = "\n>> (1) Sort by Due Date\n>> (2) Sort by Project\n>> (3) Sort by ID \n>> (m) Main menu\n";
 
     public static String selectTaskID = "\n>> (m) Main Menu\n>> Select task ID: \n";
 

@@ -1,7 +1,7 @@
-public class EditTask extends AbstractMenu {
+public class EditTaskMenu extends AbstractMenu {
     Task selectedTask = null;
 
-    public EditTask(AppController appController) {
+    public EditTaskMenu(AppController appController) {
         super(appController);
     }
 
@@ -86,10 +86,5 @@ public class EditTask extends AbstractMenu {
         System.out.println("This task has been removed: " + selectedTask);
         selectedTask = null;
         appController.showMenu(MenuName.MAIN);
-    }
-
-    public static void main(String[] args) {
-        AppController appControl = new AppController();
-        new EditTask(appControl).showMenu();
     }
 }

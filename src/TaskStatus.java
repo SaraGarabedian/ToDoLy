@@ -1,7 +1,8 @@
 public enum TaskStatus {
     TODO("To do."), DONE("Done.");
     private String name;
-    private TaskStatus(String name){
+
+    TaskStatus(String name){
         this.name = name;
     }
 

@@ -1,3 +1,7 @@
+package todoly.menu;
+
+import todoly.*;
+
 public class MainMenu extends AbstractMenu {
     public MainMenu(AppController appController) {
         super(appController);

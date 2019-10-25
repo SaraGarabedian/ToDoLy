@@ -1,3 +1,5 @@
+package todoly.menu;
+
 public class Texts {
     public static final String MAIN_MENU = "\n>> Welcome to ToDoLy\n" +
             ">> You have %d tasks todo and %d tasks are done!\n" +

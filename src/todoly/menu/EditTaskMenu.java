@@ -1,3 +1,7 @@
+package todoly.menu;
+
+import todoly.*;
+
 public class EditTaskMenu extends AbstractMenu {
     Task selectedTask = null;
 

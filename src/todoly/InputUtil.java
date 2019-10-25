@@ -1,3 +1,7 @@
+package todoly;
+
+import todoly.menu.Texts;
+
 import java.util.Scanner;
 
 public class InputUtil {

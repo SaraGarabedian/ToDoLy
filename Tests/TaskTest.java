@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import todoly.Task;
+import todoly.TaskStatus;
 
 import static org.junit.jupiter.api.Assertions.*;
 

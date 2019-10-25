@@ -1,3 +1,7 @@
+package todoly.menu;
+
+import todoly.AppController;
+
 public abstract class AbstractMenu implements Menu {
     protected AppController appController;
 

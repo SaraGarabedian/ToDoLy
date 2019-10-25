@@ -1,3 +1,7 @@
+package todoly;
+
+import todoly.TaskStatus;
+
 public class Task {
     private int id;
     private String title;

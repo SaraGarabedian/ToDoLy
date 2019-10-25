@@ -1,3 +1,5 @@
+package todoly;
+
 public enum TaskStatus {
     TODO("To do."), DONE("Done.");
     private String name;

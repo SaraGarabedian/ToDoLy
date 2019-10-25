@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class CreateTaskMenu extends AbstractMenu {
     public CreateTaskMenu(AppController appController) {
         super(appController);

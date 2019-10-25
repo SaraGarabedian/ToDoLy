@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -10,11 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SaveAndQuitTest {
 
-    //Create a task /call the method
-    //put the task into a list
-    //save the list to a testfile
-    //load the list to a new list
-    //compare what was saved to what was retrieved
     @Test
     void compareSavedToRetrievedOneElement() throws Exception {
         Task task = new Task(1, "Apple", "2019-10-15", "Now");
@@ -35,8 +29,6 @@ public class SaveAndQuitTest {
         assertEquals(task.getId(), loadedTask.getId());
         assertEquals(task.getStatus(), loadedTask.getStatus());
     }
-
-    //if save on empty list list should be empty
 
     @Test
     void compareSavedToRetriedEmptyList() throws Exception {

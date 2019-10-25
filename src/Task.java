@@ -5,7 +5,7 @@ public class Task {
     private String project;
     TaskStatus status;
 
-    public Task(int id, String title, String dueDate, String project){
+    public Task(int id, String title, String dueDate, String project) {
         this.id = id;
         this.title = title;
         this.dueDate = dueDate;
@@ -13,7 +13,7 @@ public class Task {
         this.status = TaskStatus.TODO;
     }
 
-    public Task(int id, String title, String dueDate, String project, TaskStatus status){
+    public Task(int id, String title, String dueDate, String project, TaskStatus status) {
         this.id = id;
         this.title = title;
         this.dueDate = dueDate;
@@ -59,11 +59,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("%5d|%-20s|%10s|%-12s|%-6s|",id,title,dueDate,project,status);
-        //return id + ". "+ title +", " + dueDate + ", " +project + ", " + status;
+        return String.format("%5d|%-20s|%10s|%-12s|%-6s|", id, title, dueDate, project, status);
     }
-
-//    public String stringForSaving(){
-//        return String.format("%s")
-//    }
 }

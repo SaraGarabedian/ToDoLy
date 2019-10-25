@@ -8,9 +8,7 @@ public class AppController {
     private List<Task> tasks = new ArrayList<>();
     private Map<MenuName, Menu> menus = new HashMap<>();
 
-    public AppController()
-
-    {
+    public AppController() {
         menus.put(MenuName.MAIN, new MainMenu(this));
         menus.put(MenuName.EDIT, new EditTaskMenu(this));
         menus.put(MenuName.SHOW, new ShowTasksMenu(this));
@@ -23,9 +21,9 @@ public class AppController {
         }
     }
 
-    public int getNumberOfTasks(TaskStatus todo){
+    public int getNumberOfTasks(TaskStatus todo) {
         int nbOfTasks = 0;
-        for (Task task: tasks){
+        for (Task task : tasks) {
             if (todo == task.getStatus()) {
                 ++nbOfTasks;
             }
@@ -33,7 +31,6 @@ public class AppController {
         return nbOfTasks;
     }
 
-    //Create method findNextAvailableID
     public void showMenu(MenuName menuName) {
         menus.get(menuName).showMenu();
     }
@@ -52,7 +49,7 @@ public class AppController {
     }
 
     public void printTasks() {
-        System.out.printf("%5s|%-20s|%10s|%-12s|%-6s|%n", "ID","Title","Due Date", "Project", "Status");
+        System.out.printf("%5s|%-20s|%10s|%-12s|%-6s|%n", "ID", "Title", "Due Date", "Project", "Status");
         for (Task task : getTasks()) {
             System.out.println(task);
         }

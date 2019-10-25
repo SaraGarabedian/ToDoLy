@@ -22,14 +22,22 @@ public class EditTaskMenu extends AbstractMenu {
             case "1":
                 changeTitle();
                 break;
-            case "2": changeDueDate();
-            break;
-            case"3": changeProject();
-            break;
-            case "4": markAsDone();
-            break;
-            case "r": removeTask();
-            break;
+            case "2":
+                changeDueDate();
+                break;
+            case "3":
+                changeProject();
+                break;
+            case "4":
+                markAsDone();
+                break;
+            case "r":
+                removeTask();
+                break;
+            case "m":
+                selectedTask = null;
+                appController.showMenu(MenuName.MAIN);
+                break;
             default:
                 super.handleMenuInput(input);
         }
@@ -40,17 +48,23 @@ public class EditTaskMenu extends AbstractMenu {
         System.out.println("Select ID: ");
         String selectedIDInput = InputUtil.getInput();
 
-        int selectedID = Integer.parseInt(selectedIDInput);
-        for (Task task : appController.getTasks()) {
-            if (task.getId() == selectedID) {
-                selectedTask = task;
-                break;
+        try {
+            int selectedID = Integer.parseInt(selectedIDInput);
+            for (Task task : appController.getTasks()) {
+                if (task.getId() == selectedID) {
+                    selectedTask = task;
+                    break;
+                }
             }
+        } catch (NumberFormatException e) {
+            //Handle as unfound task
+        }
+
+        if (selectedTask == null) {
+            System.out.println("Task ID not found.");
+            selectTask();
         }
     }
-
-    //ADD: if valueNotFound
-    //ADD: return to "Select ID"
 
     private void changeTitle() {
         System.out.println("Change Title from: " + selectedTask.getTitle());
@@ -76,12 +90,12 @@ public class EditTaskMenu extends AbstractMenu {
         showMenu();
     }
 
-    private void markAsDone(){
+    private void markAsDone() {
         selectedTask.setStatus(TaskStatus.DONE);
         showMenu();
     }
 
-    private void removeTask(){
+    private void removeTask() {
         appController.getTasks().remove(selectedTask);
         System.out.println("This task has been removed: " + selectedTask);
         selectedTask = null;
